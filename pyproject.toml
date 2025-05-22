@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "book-man"
+version = "0.1.0"
+description = "电子书管理工具，支持epub转txt格式"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["ebooklib", "beautifulsoup4"]
+
+[project.scripts]
+book-man = "book_man.cli:main"
+
+[tool.setuptools]
+packages = ["book_man"]
+package-dir = {"" = "src"}
